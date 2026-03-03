@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --main-color: #1d263b;
+    --second-color: #3FA9FF;
+    --font-color: #504A4A;
+    --font-header: 3.2rem;
+}
+
+html {
+    /* font-size: 62.5%; */
+}
+
+body {
+
+    font-family: 'Poppins';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+}
+
+/* .sidebar li a {
+    font-size: 1.6rem;
+} */
+
+
+/* Card */
+.wrap-card {
+    height: auto;
+}
+
+.card {
+    width: 24rem;
+    height: auto;
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+/* Nav bottom(Mobile) */
+.nav-bottom {
+    background-color: white !important;
+    display: none;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    z-index: 99;
+
+
+}
+
+.nav-bottom li a {
+    font-size: 1rem;
+}
+
+.nav-bottom i {
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width:1200px) {
+    .card {
+        width: 20rem;
+    }
+}
+
+
+
+
+@media screen and (max-width:992px) {
+    /* html{
+        font-size: 14px;
+    } */
+
+    .sidebar {
+        width: 14rem !important;
+    }
+    .card {
+        width: 19rem;
+        height: auto;
+        background-color: var(--main-color);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+
+    }
+}
+
+
+.wrap1 {
+    background-color: #F87171 !important;
+}
+
+.wrap2 {
+    background-color: #FBBF24 !important;
+}
+
+.wrap3 {
+    background-color: #4ADE80 !important;
+}
+
+.wrap4 {
+    background-color: #A78BFA !important;
+}
+
+.chart {
+    width: 100%;
+    height: 450px;
+}
+
+.chart canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media screen and (max-width:768px) {
+
+    /* html{
+        font-size: 90%;
+    } */
+    .chart {
+        height: 400px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .nav-bottom {
+        display: flex;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    /* html {
+        font-size: 100%;
+    } */
+
+    .chart {
+        height: 300px;
+
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width:400px) {
+    html {
+        font-size: 85%;
+    }
+}

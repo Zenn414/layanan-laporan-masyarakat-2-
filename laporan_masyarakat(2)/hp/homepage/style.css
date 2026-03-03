@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins';
+    font-size: 62.5%;
+
+}
+
+body {
+    font-family: 'Poppins' !important;
+    background-color: #F9FAFB !important;
+    position: relative;
+
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.hero {
+    min-height: 30vh;
+}
+
+.wrapper-card .card {
+    border-radius: 1.2rem;
+    width: 19rem !important;
+}
+
+.card-title {
+    font-size: 6rem !important;
+}
+
+/* Header */
+button {
+    font-size: 2rem !important;
+}
+
+.profil-circle {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+/* Headine */
+.sapa {
+    color: #504A4A !important;
+}
+
+/* Section2 - swipper js */
+.swiper {
+    width: 100% !important;
+    height: auto;
+    display: none;
+
+
+}
+
+.container-fluid .card,
+.swiper .swiper-slide .card {
+    width: 14rem !important;
+    height: 14rem !important;
+    border-radius: 50% !important;
+    background: transparent;
+    border: 1px solid #504A4A;
+}
+
+.container-fluid .card p,
+.swiper .swiper-slide .card p {
+    font-size: 1.4rem;
+}
+
+.card i {
+    font-size: 3rem;
+}
+
+.swiper-slide {
+    width: auto !important;
+    opacity: 0.7;
+    transform: scale(0.8);
+}
+
+.card-desktop {
+    display: flex;
+}
+
+.container-fluid .card:hover {
+    box-shadow: 0 0 10px rgb(15, 106, 171, 0.9) !important;
+    border: rgb(15, 106, 171) !important;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-slide-active .card {
+    transform: scale(1.1);
+    /* Diperbesar 20% */
+}
+
+.swiper .card i {
+    font-size: 2.4rem;
+    color: #504A4A;
+}
+
+
+
+
+.swiper .card p {
+    font-size: 1rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 30px;
+    /* kecilkan panah */
+
+}
+
+/* section-3 */
+.section-4 .card-title {
+    font-size: 8rem !important;
+}
+
+.section-4 .card-text {
+    font-size: 2rem !important;
+}
+
+.section-4 .card {
+    width: 30rem !important;
+
+}
+
+.section-5 img {
+    width: 40rem;
+    display: block;
+}
+
+/* Nav bottom */
+.nav-bottom {
+    background-color: white !important;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.nav-bottom li a {
+    font-size: 1.4rem;
+}
+
+.nav-bottom i {
+    font-size: 2.8rem;
+}
+.nav-bottom .nav-link{
+    color: #D9D9D9 !important;
+}
+.nav-bottom .nav-link.active {
+    color: #0D6EFD !important;
+}
+@media screen and (max-width:912px) {
+    .section-5 img {
+    width: 35rem;
+    display: block;
+}
+}
+@media screen and (max-width:768px) {
+    .swiper {
+        display: block;
+    }
+
+    .card-desktop {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .container-fluid .card,
+    .swiper .swiper-slide .card {
+        width: 10rem !important;
+        height: 10rem !important;
+        border-radius: 50% !important;
+        background: transparent;
+        border: 1px solid #504A4A;
+
+    }
+
+    .container-fluid .card p,
+    .swiper .swiper-slide .card p {
+        font-size: 1rem;
+    }
+
+    .card i {
+        font-size: 1.4rem;
+    }
+
+    .section-4 .card-title {
+        font-size: 6rem !important;
+    }
+
+    .section-4 .card-text {
+        font-size: 1.6rem !important;
+    }
+
+    .section-4 .card {
+        width: 20rem !important;
+
+    }
+
+    .section-5 img {
+        width: 40rem;
+        display: none;
+    }
+}
+
+@media screen and (max-width:578px) {}
+
+@media screen and (max-width:412px) {
+    .wrapper-card .card {
+        width: 16rem !important;
+    }
+
+    .wrapper-card .card-text {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media screen and (max-width:360px) {
+    html {
+        font-size: 59%;
+    }
+}

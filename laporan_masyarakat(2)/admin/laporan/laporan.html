@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="laporan.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+
+
+    <!-- As a heading -->
+    <div class="main">
+
+        <nav class="navbar navbar-dark bg-primary text-light w-100 py-md-5 py-4">
+            <div class="d-flex ps-3 flex-column flex-md-row gap-1 align-items-center">
+                <h1 class="navbar-brand fw-bold fs-2 m-0 h1 ">Selamat Datang Admin</h1>
+                <p class="m-0 fs-5">- Layanan Laporan Masyarakat</p>
+            </div>
+        </nav>
+
+        <!-- SideBar -->
+        <div class="d-md-flex">
+            <ul class="nav sidebar shadow bg-white flex-column gap-3 pt-4 text-white" style="width: 16rem">
+                <li class="nav-item ms-2 ">
+                    <a class="nav-link active " aria-current="page" href="#"><i class="bi bi-speedometer2"></i>
+                        Dashboard</a>
+                    <hr class="bg-secondary">
+                </li>
+
+                <li class="nav-item ms-2">
+                    <a class="nav-link" href="#"><i class="bi bi-pencil-square me-2"></i> Laporan</a>
+                    <hr class="bg-secondary">
+                </li>
+                <li class="nav-item  ms-2">
+                    <a class="nav-link" href="#"><i class="bi bi-person-circle me-2"></i> Akun Saya</a>
+                    <hr class="bg-secondary">
+                </li>
+
+            </ul>
+            <div class="content p-2 flex-fill ">
+                <div class="table-responsive">
+                    <table class="table flex-shrink-1 table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Kode Laporan</th>
+                                <th scope="col">Judul Laporan</th>
+                                <th scope="col">Kategori Laporan</th>
+                                <th scope="col">Tgl Laporan</th>
+                                <th scope="col">Bukti Foto</th>
+                                <th scope="col">Aksi</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>2K0Q1LJJH</td>
+                                <td>Jalan Rusak</td>
+                                <td>Fasilitas & Infastruktur</td>
+                                <td> 18/09/2026</td>
+                                <td class="img center"> <img src="laporanimg.jpg" alt="" width="100" class="rounded"> <i
+                                        class="bi bi-zoom-in" data-bs-toggle="modal" data-bs-target="#popGambar"></i>
+                                </td>
+                                <td>
+                                    <button class="btn btn-warning text-white " aria-label="edit"><i
+                                            class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-danger" aria-label="edit"><i
+                                            class="bi bi-trash-fill"></i></button>
+                                    <button class="btn btn-primary" aria-label="edit"><i
+                                            class="bi bi-eye-fill"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>2K0Q1LJJH</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>@social</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>@social</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>@social</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>@social</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bottom(Mobile) -->
+        <div class="nav-bottom justify-content-center ">
+            <ul class="nav justify-content-between px-3 text-primary align-items-center gap-3">
+                <li class="nav-item">
+                    <a class="nav-link active d-flex flex-column align-items-center" aria-current="page" href="index.html"><i
+                            class="bi bi-speedometer2"></i>
+                        Dashboard</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link d-flex flex-column align-items-center" href="laporan.html"><i
+                            class="bi bi-pencil-square me-2"></i> Laporan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex flex-column align-items-center" href="profil.html"><i
+                            class="bi bi-person-circle me-2"></i> Akun Saya</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Pop up img -->
+        <div class="modal fade" id="popGambar" tabindex="-1 " aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-transparent border-0">
+                    <div class="modal-header border-0">
+                        <button type="button" class="border-0 bg-transparent text-white fs-1" data-bs-dismiss="modal"
+                            aria-label="Close"><i class="bi bi-x-circle"></i></button>
+                    </div>
+                    <div class="modal-body text-center p-0">
+                        <img src="laporanimg.jpg" class="img-fluid rounded shadow-lg" alt="Preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Boostrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
