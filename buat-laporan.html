@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- link icon boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Poppins';
+            /* font-size: 62.5%; */
+
+        }
+
+        body {
+            font-family: 'Poppins' !important;
+            background-color: #F9FAFB !important;
+
+        }
+        i{
+            cursor: pointer;
+        }
+
+        .form-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            border: 2px dashed #2563EB;
+            cursor: pointer;
+        }
+
+        .form-img input[type="file"] {
+            display: none;
+        }
+
+        input {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-3">
+        <div class="my-3">
+            <h1 class="text-center pb-4 fw-bold text-primary">Laporan</h1>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Judul Laporan</label>
+            <input type="email" class="form-control py-2" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Kategori Laporan</label>
+            <select id="kategori" class="form-select" aria-label="Pilih Kategori">
+                option selected disabled>-- Pilih Kategori --</option>
+
+                <option value="infrastruktur">Infrastruktur & Fasilitas Umum</option>
+                <option value="lingkungan">Kebersihan & Lingkungan</option>
+                <option value="keamanan">Keamanan & Ketertiban</option>
+                <option value="transportasi">Transportasi & Lalu Lintas</option>
+                <option value="kesehatan">Kesehatan</option>
+                <option value="pendidikan">Pendidikan</option>
+                <option value="administrasi">Administrasi & Layanan Publik</option>
+                <option value="air_listrik">Air & Listrik</option>
+                <option value="sosial">Sosial & Bantuan</option>
+                <option value="teknologi">Teknologi & Informasi</option>
+                <option value="lainnya">Lainnya</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-img">Pilih Gambar
+                <input type="file" id="img">
+            </label>
+        </div>
+        <div class="mb-3" id="textImg">
+            
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Pilih Lokasi</label>
+            <iframe class="form-control"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.618941940895!2d106.98977307468466!3d-6.24332901931962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f006f094681%3A0xf77e83f58d8ff24a!2sDiskominfostandi%20Kota%20Bekasi!5e0!3m2!1sid!2sid!4v1771032811768!5m2!1sid!2sid"
+                width="100" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Keluhan</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary w-100 mb-1" data-bs-toggle="modal" data-bs-target="#kirim">Kirim</button>
+        <button class="btn  w-100" style="background-color: #D9D9D9;" data-bs-toggle="modal"
+            data-bs-target="#kembali">Kembali</button>
+
+        <div class="modal fade" id="kirim">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-4 m-auto" style="width: 300px;">
+                    <div class="modal-body text-center">
+                        <i class="bi bi-check-circle-fill display-1 text-success"></i>
+                        <h5 class="mt-3">Laporan berhasil dikirim!</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="kembali">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-4 m-auto">
+                    <div class="modal-body p-0">
+                        <h5 class="mb-3">apakah anda yakin ingin keluar dari halaman ini?</h5>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary" type="button" onclick="window.location.href='hp/homepage/index.html'">iya</button>
+                            <button class="btn"  style="background-color: #D9D9D9;">tidak</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+        <script>
+            const img=document.getElementById('img');
+            const textImg=document.getElementById('textImg');
+
+            img.addEventListener('change', ()=>{
+                const file=img.files[0];
+                textImg.innerHTML+=`<div class="mb-3 d-flex justify-content-between align-items-center "><p id="">${file.name}</p>
+            <i id="removeBtn" class="bi bi-x fs-4"></i> </div>`;
+
+            const removeBtn=document.getElementById('removeBtn');
+            removeBtn.addEventListener('click', (e)=>{
+                e.target.parentElement.remove();
+            })
+            })
+        </script>
+
+
+</body>
+
+</html>
